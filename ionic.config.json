@@ -1,0 +1,7 @@
+{
+  "name": "consulting-webpage",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

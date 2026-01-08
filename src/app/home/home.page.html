@@ -1,0 +1,302 @@
+<!-- Navigation Header -->
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/" class="logo-btn">JN</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="desktop-nav">
+      <ion-button fill="clear" (click)="scrollTo('about')">About</ion-button>
+      <ion-button fill="clear" (click)="scrollTo('services')">Services</ion-button>
+      <ion-button fill="clear" (click)="scrollTo('projects')">Projects</ion-button>
+      <ion-button fill="clear" (click)="scrollTo('media')">Media</ion-button>
+      <ion-button fill="clear" (click)="scrollTo('contact')">Contact</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" class="mobile-nav">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" [scrollEvents]="true">
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-avatar">JN</div>
+      <h1 class="hero-title">Jessica Nasica</h1>
+      <p class="hero-subtitle">Senior Conservation Technology Consultant</p>
+      <p class="hero-tagline">Building Sustainable Field Data Collection Apps & Digital Monitoring Systems</p>
+      <div class="hero-buttons">
+        <ion-button fill="solid" color="primary" shape="round" (click)="scrollTo('projects')">
+          View Projects
+        </ion-button>
+        <ion-button fill="outline" color="primary" shape="round" (click)="scrollTo('contact')">
+          Get in Touch
+        </ion-button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+
+      <div class="about-content">
+        <p class="about-text">
+          I specialize in developing custom scientific field applications for conservation organizations, transforming
+          paper-based data collection into comprehensive digital solutions tailored to each reserve's unique needs.
+        </p>
+        <p class="about-text">
+          My work focuses on creating robust apps that function reliably in challenging field conditions—from remote
+          island locations with limited connectivity to rugged environments where standard technology fails.
+        </p>
+        <p class="about-text">
+          Working as a consultant for organizations like <strong>Nature Seychelles</strong>, I design and implement
+          end-to-end digital systems for conservation data collection, including turtle monitoring, seabird surveys,
+          invasive species tracking, and habitat assessments.
+        </p>
+        <p class="about-text">
+          Each application is built from the ground up to address the specific workflows, data requirements, and
+          operational constraints of individual sites—ensuring that <em>technology serves the science</em> rather than
+          the other way around.
+        </p>
+      </div>
+
+      <!-- Key Strengths -->
+      <ion-grid class="strengths-grid">
+        <ion-row>
+          <ion-col size="12" size-md="6">
+            <div class="strength-card strength-card--primary">
+              <div class="strength-icon">
+                <ion-icon name="cloud-offline-outline"></ion-icon>
+              </div>
+              <h3>Offline-First Design</h3>
+              <p>Apps that work reliably in areas without connectivity, syncing automatically when connection is
+                available.</p>
+            </div>
+          </ion-col>
+          <ion-col size="12" size-md="6">
+            <div class="strength-card strength-card--secondary">
+              <div class="strength-icon strength-icon--secondary">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+              <h3>GPS Integration</h3>
+              <p>Precise spatial data capture for accurate mapping and location-based conservation tracking.</p>
+            </div>
+          </ion-col>
+          <ion-col size="12" size-md="6">
+            <div class="strength-card strength-card--secondary">
+              <div class="strength-icon strength-icon--secondary">
+                <ion-icon name="shield-checkmark-outline"></ion-icon>
+              </div>
+              <h3>Ruggedized Compatibility</h3>
+              <p>Built for challenging field environments with hardware that withstands extreme conditions.</p>
+            </div>
+          </ion-col>
+          <ion-col size="12" size-md="6">
+            <div class="strength-card strength-card--primary">
+              <div class="strength-icon">
+                <ion-icon name="people-outline"></ion-icon>
+              </div>
+              <h3>Intuitive Interfaces</h3>
+              <p>Designed for all user levels—from seasonal volunteers to senior scientists.</p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section section--light">
+    <div class="container">
+      <h2 class="section-title">Services</h2>
+      <p class="section-subtitle">End-to-end digital transformation for conservation organizations</p>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" size-md="4">
+            <div class="service-card">
+              <div class="service-icon service-icon--primary">
+                <ion-icon name="code-slash-outline"></ion-icon>
+              </div>
+              <h3>Custom App Development</h3>
+              <p>Bespoke field data collection applications built specifically for your conservation workflows, data
+                requirements, and operational constraints.</p>
+            </div>
+          </ion-col>
+          <ion-col size="12" size-md="4">
+            <div class="service-card">
+              <div class="service-icon service-icon--secondary">
+                <ion-icon name="server-outline"></ion-icon>
+              </div>
+              <h3>Digital Systems Design</h3>
+              <p>Complete digital monitoring ecosystems including data collection, storage, synchronization, and
+                reporting infrastructure.</p>
+            </div>
+          </ion-col>
+          <ion-col size="12" size-md="4">
+            <div class="service-card">
+              <div class="service-icon service-icon--gradient">
+                <ion-icon name="school-outline"></ion-icon>
+              </div>
+              <h3>Training & Support</h3>
+              <p>Comprehensive training programs and ongoing support to ensure successful adoption and long-term
+                sustainability of digital tools.</p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtitle">Transforming conservation field operations through technology</p>
+
+      <!-- Featured Project: ARM -->
+      <div class="project-featured">
+        <div class="project-tags">
+          <span class="tag tag--primary">Featured Project</span>
+          <span class="tag tag--secondary">Mar 2024 - Present</span>
+        </div>
+        <h3 class="project-title">ARM - App for Reserve Management</h3>
+        <p class="project-org">Associated with Nature Seychelles | Funded by SeyCCAT's Blue Grants Fund</p>
+
+        <p class="project-desc">
+          The Application for Reserve Management (ARM) is a comprehensive digital conservation data collection system
+          developed for Nature Seychelles' Cousin Island Special Reserve. The app replaces paper-based methods with an
+          integrated digital platform for critical conservation activities.
+        </p>
+
+        <div class="project-features">
+          <div class="feature-item">
+            <ion-icon name="checkmark-circle" color="secondary"></ion-icon>
+            <span>Turtle Nesting Monitoring</span>
+          </div>
+          <div class="feature-item">
+            <ion-icon name="checkmark-circle" color="secondary"></ion-icon>
+            <span>Tortoise Monitoring</span>
+          </div>
+          <div class="feature-item">
+            <ion-icon name="checkmark-circle" color="secondary"></ion-icon>
+            <span>Seabird Census Surveys</span>
+          </div>
+          <div class="feature-item">
+            <ion-icon name="checkmark-circle" color="secondary"></ion-icon>
+            <span>Invasive Species Tracking</span>
+          </div>
+          <div class="feature-item">
+            <ion-icon name="checkmark-circle" color="secondary"></ion-icon>
+            <span>Beach Profiling</span>
+          </div>
+          <div class="feature-item">
+            <ion-icon name="checkmark-circle" color="secondary"></ion-icon>
+            <span>Photo Capture & GPS</span>
+          </div>
+        </div>
+
+        <p class="project-note">
+          <em>Deployed across rugged tablets with offline data collection, GPS integration, and automated
+            synchronization—significantly improving efficiency and data quality for wardens, scientists, and
+            volunteers.</em>
+        </p>
+      </div>
+
+      <!-- Upcoming Projects -->
+      <ion-grid class="upcoming-projects">
+        <ion-row>
+          <ion-col size="12" size-md="6">
+            <div class="upcoming-card">
+              <span class="tag tag--secondary">In Development</span>
+              <h4>Citizen Science App #1</h4>
+              <p>Currently being developed with Nature Seychelles for public engagement in conservation data collection.
+              </p>
+            </div>
+          </ion-col>
+          <ion-col size="12" size-md="6">
+            <div class="upcoming-card">
+              <span class="tag tag--secondary">In Development</span>
+              <h4>Citizen Science App #2</h4>
+              <p>Another citizen science initiative in partnership with Nature Seychelles, expanding community
+                participation.</p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </section>
+
+  <!-- Media Section -->
+  <section id="media" class="section section--light">
+    <div class="container">
+      <h2 class="section-title">Media & Press</h2>
+      <p class="section-subtitle">Documentation, coverage, and resources from conservation technology projects</p>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" size-md="4">
+            <div class="media-card">
+              <div class="media-placeholder media-placeholder--primary">
+                <ion-icon name="images-outline"></ion-icon>
+              </div>
+              <h3>Photo Gallery</h3>
+              <p>Field documentation and project imagery from conservation sites.</p>
+            </div>
+          </ion-col>
+          <ion-col size="12" size-md="4">
+            <div class="media-card">
+              <div class="media-placeholder media-placeholder--secondary">
+                <ion-icon name="videocam-outline"></ion-icon>
+              </div>
+              <h3>Video Content</h3>
+              <p>Training materials, project demonstrations, and field footage.</p>
+            </div>
+          </ion-col>
+          <ion-col size="12" size-md="4">
+            <div class="media-card">
+              <div class="media-placeholder media-placeholder--gradient">
+                <ion-icon name="newspaper-outline"></ion-icon>
+              </div>
+              <h3>Press Coverage</h3>
+              <p>Articles, interviews, and media coverage of conservation technology initiatives.</p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <p class="media-note">Media gallery coming soon. Contact me for specific materials.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="section-subtitle">Ready to transform your conservation data collection? Let's discuss how custom
+        technology solutions can support your organization's mission.</p>
+
+      <div class="contact-box">
+        <a href="mailto:contact@jessicanasica.com" class="contact-email">
+          <ion-icon name="mail-outline"></ion-icon>
+          <span>contact&#64;jessicanasica.com</span>
+        </a>
+        <div class="social-links">
+          <a href="#" class="social-link">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Jessica Nasica. All rights reserved.</p>
+    <p class="footer-subtitle">Conservation Technology Consultant</p>
+  </footer>
+
+</ion-content>
