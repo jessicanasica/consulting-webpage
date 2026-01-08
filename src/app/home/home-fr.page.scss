@@ -1,0 +1,11 @@
+// Import all styles from the main home page
+@use './home.page.scss' as *;
+
+// Translation note styling
+.testimonial-translation-note {
+  text-align: right;
+  font-size: 0.875rem;
+  color: var(--coastal-500);
+  margin-top: 1rem;
+  font-style: italic;
+}
