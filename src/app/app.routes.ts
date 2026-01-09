@@ -1,4 +1,5 @@
-import { Routes } from '@angular/router';
+import { Routes, provideRouter } from '@angular/router';
+import { withHashLocation } from '@angular/router';
 
 export const routes: Routes = [
   {
@@ -11,7 +12,15 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: '/home',
     pathMatch: 'full',
   },
+  {
+    path: '**',
+    redirectTo: '/home',
+  },
 ];
+
+export const appConfig = {
+  providers: [provideRouter(routes, withHashLocation())]
+};
